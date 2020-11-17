@@ -91,4 +91,10 @@ public void testAddHeadersnameNull() throws Exception {
 	 email.addHeader(EMPTY_NAME, VALUE);
 }
 
+//code to test for the exception of empty or null value
+@Test (expected = IllegalArgumentException.class)
+public void testAddHeadersValueNull() throws Exception {
+	 email.addHeader(TEST_NAME, EMPTY_VALUE);
+}
+
 }
