@@ -68,5 +68,15 @@ public void testAddBcc() throws Exception {
 	   
 }
 
+//code to test addCc(String)
+@Test
+public void testAddCc() throws Exception {
+	   
+	 email.addCc(TEST_EMAIL);
+	 
+	   assertEquals(1, email.getCcAddresses().size());
+	   
+}
+
 
 }
