@@ -104,4 +104,11 @@ public void testAddReplyTo() throws Exception{
 	 
 }
 
+//test for getHostName(String)
+@Test
+public void testGetHostName() throws Exception{
+	email.setHostName("chad");
+	email.getHostName();
+}
+
 }
