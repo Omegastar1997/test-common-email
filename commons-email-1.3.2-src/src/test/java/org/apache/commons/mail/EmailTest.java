@@ -111,4 +111,12 @@ public void testGetHostName() throws Exception{
 	email.getHostName();
 }
 
+//test for getHostName(String) with a null String
+@Test
+public void testGetHostNameNull() throws Exception{
+	email.setHostName(null);
+	email.getHostName();
+}
+
+
 }
