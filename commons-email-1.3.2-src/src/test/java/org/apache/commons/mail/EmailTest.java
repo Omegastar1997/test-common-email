@@ -97,4 +97,11 @@ public void testAddHeadersValueNull() throws Exception {
 	 email.addHeader(TEST_NAME, EMPTY_VALUE);
 }
 
+//code to test AddReplyTo(String, String)
+@Test
+public void testAddReplyTo() throws Exception{
+	 email.addReplyTo(TEST_EMAIL, TEST_NAME);
+	 
+}
+
 }
