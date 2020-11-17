@@ -78,5 +78,11 @@ public void testAddCc() throws Exception {
 	   
 }
 
+//code to test AddHeader(string, String) function
+@Test
+public void testAddHeadernotnull() throws Exception {
+	 email.addHeader(TEST_NAME, VALUE);
+	 assertNotNull(email.getHeaders());
+}
 
 }
