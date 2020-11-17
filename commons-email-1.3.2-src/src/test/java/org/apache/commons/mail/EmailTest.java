@@ -118,5 +118,14 @@ public void testGetHostNameNull() throws Exception{
 	email.getHostName();
 }
 
+//the test code for GetMailSession
+@Test
+public void testGetMailSession() throws Exception {
+	 email.setAuthentication("Test", "Test01");
+		email.bounceAddress = "Test";
+		email.setHostName("chad");
+		email.getMailSession();
+}
+
 
 }
