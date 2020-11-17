@@ -57,7 +57,7 @@ public void tearDownEmailTest() throws Exception{
 }
 
 /*
- * Test AddBcc (String email) function
+ * Test AddBcc (String email...) function
  */
 @Test
 public void testAddBcc() throws Exception {
@@ -78,11 +78,17 @@ public void testAddCc() throws Exception {
 	   
 }
 
-//code to test AddHeader(string, String) function
+//code to test AddHeader(String, String) function
 @Test
 public void testAddHeadernotnull() throws Exception {
 	 email.addHeader(TEST_NAME, VALUE);
 	 assertNotNull(email.getHeaders());
+}
+
+//code to test for the exception of empty or null name for AddHeader(String, String)
+@Test (expected = IllegalArgumentException.class)
+public void testAddHeadersnameNull() throws Exception {
+	 email.addHeader(EMPTY_NAME, VALUE);
 }
 
 }
