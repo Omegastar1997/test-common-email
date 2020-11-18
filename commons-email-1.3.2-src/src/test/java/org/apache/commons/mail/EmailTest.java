@@ -153,4 +153,26 @@ public void testSetFrom() throws Exception {
 	 
 }
 
+//the normal test code for BuildMimeMessage()
+@Test
+public void testBuildMimeMessage() throws Exception{
+	email.setAuthentication("Test", "Test01");
+	email.bounceAddress = "Test";
+	email.setHostName("chad");
+	email.getMailSession();
+	email.addBcc(TEST_EMAILS);
+	email.addCc(TEST_EMAIL);
+	email.addTo(TEST_EMAIL);
+	email.ccList.addAll(email.getCcAddresses());
+	email.bccList.addAll(email.getBccAddresses());
+	email.toList.addAll(email.getToAddresses());
+	email.addReplyTo(TEST_EMAIL);
+	email.addHeader(TEST_NAME, VALUE);
+	email.setSentDate(c.getTime());
+	email.setFrom(TEST_EMAIL);
+	email.setSubject("mom");
+	email.setContent(TEST_NAME, null);
+	email.buildMimeMessage();
+}
+
 }
