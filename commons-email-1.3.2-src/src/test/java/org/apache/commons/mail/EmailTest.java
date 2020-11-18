@@ -191,4 +191,18 @@ public void testBuildMimeMessageNull() throws Exception{
 		email.buildMimeMessage();
 }
 
+// the test code for using null values and having no list for buildMimeMessage()
+@Test (expected = EmailException.class)
+public void testBuildMimeMessageNull2() throws Exception{
+		email.setAuthentication("Test", "Test01");
+		email.bounceAddress = "Test";
+		email.popHost = "Test";
+		email.popPassword = "test01";
+		email.popUsername = "test" ;
+		email.charset = "1";
+		email.setHostName("chad");
+		email.getMailSession();
+		email.buildMimeMessage();
+}
+
 }
