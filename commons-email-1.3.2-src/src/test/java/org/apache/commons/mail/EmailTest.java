@@ -133,5 +133,10 @@ public void testGetSentDate() throws Exception {
 	    email.setSentDate(c.getTime());
 }
 
+//the test code for GetSendDate with a null value
+@Test
+public void testGetSentDateNull() throws Exception {
+		email.setSentDate(d2);
+}
 
 }
