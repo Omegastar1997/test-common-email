@@ -146,4 +146,11 @@ public void testGetSocketConnectionTimeout() throws Exception {
 	 email.getSocketConnectionTimeout();
 }
 
+//the test code for SetFrom()
+@Test
+public void testSetFrom() throws Exception {
+	 email.setFrom(TEST_EMAIL);
+	 
+}
+
 }
