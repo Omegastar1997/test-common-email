@@ -127,5 +127,11 @@ public void testGetMailSession() throws Exception {
 		email.getMailSession();
 }
 
+//the test code for GetSentDate with a non null value
+@Test
+public void testGetSentDate() throws Exception {
+	    email.setSentDate(c.getTime());
+}
+
 
 }
