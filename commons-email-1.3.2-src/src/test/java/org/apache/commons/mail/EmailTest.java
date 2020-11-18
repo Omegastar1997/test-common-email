@@ -175,4 +175,20 @@ public void testBuildMimeMessage() throws Exception{
 	email.buildMimeMessage();
 }
 
+//the test code for using null variables and only having a bccList for BuildMimeMessage()
+@Test
+public void testBuildMimeMessageNull() throws Exception{
+		email.setAuthentication("Test", "Test01");
+		email.bounceAddress = "Test";
+		email.popHost = "Test";
+		email.popPassword = "test01";
+		email.popUsername = "test" ;
+		email.charset = "1";
+		email.setHostName("chad");
+		email.getMailSession();
+		email.addBcc(TEST_EMAILS);
+		email.bccList.addAll(email.getBccAddresses());
+		email.buildMimeMessage();
+}
+
 }
