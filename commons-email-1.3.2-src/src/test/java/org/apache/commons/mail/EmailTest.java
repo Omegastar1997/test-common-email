@@ -139,4 +139,11 @@ public void testGetSentDateNull() throws Exception {
 		email.setSentDate(d2);
 }
 
+//the test code for GetSocketConnctionTimeOut()
+@Test
+public void testGetSocketConnectionTimeout() throws Exception {
+	 email.setSocketConnectionTimeout(25);
+	 email.getSocketConnectionTimeout();
+}
+
 }
